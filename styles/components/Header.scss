@@ -1,0 +1,94 @@
+header{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  .contact-bar{
+    width: 100%;
+    padding: 0.25rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $primary;
+    color: #fff;
+    font-size: 14px;
+
+    .punch-line{
+      text-transform: uppercase;
+    }
+
+    .phone{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      img{ 
+        width: 18px; 
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .menu{
+    width: 100%;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+
+    .left-side{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      
+      .logo{
+        width: 100px;
+        margin-right: 2rem;
+
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+    .right-side{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .cart{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img{
+          margin-right: 0.5rem;
+        }
+        span{
+          font-size: 14px;
+        }
+      }
+    }
+
+    .links{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      a{
+        color: $gray;
+        text-decoration: none;
+        margin-right: 2rem;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

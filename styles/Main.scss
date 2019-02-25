@@ -1,0 +1,72 @@
+/** FONTS **/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:900|Roboto:100,400,700');
+
+/** VARIABLES **/
+
+$primary: #F0A93F;
+$gray: #6C6D6C;
+$before-color: #F9461C;
+$during-color: #CD202C;
+$after-color: #FFB612;
+/** IMPORTS **/
+
+@import 'Normalize';
+@import 'components/Header';
+@import 'components/Buttons';
+@import 'components/Landing';
+@import 'components/Footer';
+
+/** GENERAL STYLES **/
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+.content{
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.to-right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.to-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-header{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 500px;
+  h3{
+    margin: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  hr{
+    height: 3px;
+    background-color: $primary;
+    border: none;
+    width: 50%;
+    margin: 0;
+  }
+  p{
+    font-size: 17px;
+  }
+}
+
+.w50{
+  width: 50%;
+}

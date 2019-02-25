@@ -1,0 +1,25 @@
+.button{
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+
+  &:hover{
+    opacity: 0.9;
+  }
+}
+
+.button-big{
+  padding: 2rem 3rem;
+  font-size: 20px;
+}
+
+.primary-button{ background-color: $primary; }
+.gray-button{ background-color: $gray; }
+
+.line-button{
+  border: 1px solid $primary;
+  font-weight: bold;
+  color: $gray;
+}
