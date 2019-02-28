@@ -74,3 +74,23 @@ footer{
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  footer{
+    .content{
+      .site-map{
+        margin: 2rem 0;
+        flex-wrap: wrap;
+        .column{
+          width: 48%;
+        }
+      }
+      .copyright{
+        flex-direction: column;
+        .social-media{
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

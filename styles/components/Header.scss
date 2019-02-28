@@ -91,4 +91,71 @@ header{
       }
     }
   }
+
+  .mobile-menu{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    .logo{
+      width: 130px;
+      img{
+        width: 100%;
+      }
+    }
+    .right-side{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .cart{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img{
+          margin-right: 0.5rem;
+        }
+        span{
+          font-size: 14px;
+        }
+      }
+      .hamburger{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1.2rem;
+        div{
+          width: 28px;
+          height: 2px;
+          background-color: $gray;
+          margin: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  header{
+    .contact-bar{
+      padding: 5px;
+      font-size: 12px;
+      .punch-line{
+        span{
+          display: none;
+        }
+      }
+      .phone{
+        img{
+          margin-right: 5px;
+        }
+      }
+    }
+    .menu{
+      display: none;
+    }
+    .mobile-menu{
+      display: flex;
+    }
+  }
 }
