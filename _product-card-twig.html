@@ -1,0 +1,39 @@
+<div class="product">
+  <div class="row">
+    <a href="/productos/{{ product.permalink }}">
+      {% if product.image_url is not empty and product.image_url is defined %}
+      <img class="product-card__img" src="{{ product.image_url }}" alt="{{ product.name }}">
+      {% else %}
+      <img class="product-card__img" src="{{ 'placeholders/product-15.jpg' | global_img_url }}"
+        alt="{{ product.name }}">
+      {% endif %}
+    </a>
+    <div class="product-price-data text-center">
+      <h3 class="product-card-data__title">
+        <a href="/productos/{{ product.permalink }}">{{ product.name }}</a>
+      </h3>
+      {% if product.sku.compared_price > 0 %}
+      <p class="product-price-data__text"><del>{{ product.sku.compared_price | money('symbol', 'code') }}</del>
+        <span
+          class="product-price-data-price product-price__discount">{{ product.sku.price | money('symbol', 'code') }}</span>
+      </p>
+      {% else %}
+      <p class="product-price-data__text"><span
+          class="product-price-data-price">{{ product.sku.price | money('symbol', 'code') }}</span></p>
+      {% endif %}
+
+      {% if product.is_in_stock %}
+      {% if product.has_skus %}
+      <a class="btn btn-small" href="/productos/{{ product.permalink }}">Ver opciones</a>
+      {% else %}
+      <form action="/carrito/agregar" method="post">
+        <input type="hidden" name="sku_id" id="js-sku-id" value="{{ product.sku.id }}">
+        <button class="btn btn-small">Agregar al Carrito</button>
+      </form>
+      {% endif %}
+      {% else %}
+      <a class="btn btn-small disabled" href="/productos/{{ product.permalink }}">No disponible</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
